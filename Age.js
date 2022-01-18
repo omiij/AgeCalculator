@@ -44,5 +44,6 @@ function calculateage() {
   document.getElementById("year").innerHTML=Math.floor(AGE/(1000*60*60*24*365))+" year";
   let AZ=Math.floor(AGE%(1000*60*60*24*365));
   document.getElementById("month").innerHTML=Math.floor(AZ/(1000*60*60*24*31))+" months";
-  document.getElementById("days").innerHTML=Math.floor(`${Age_date}` - `${D_date}`)+" days";
+    document.getElementById("days").innerHTML =
+    Math.abs(Math.floor(`${D_date}` - `${Age_date}`)) + " days";
 }
